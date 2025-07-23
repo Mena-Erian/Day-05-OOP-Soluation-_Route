@@ -1,4 +1,5 @@
 ﻿using Demo.Abstraction;
+using Demo.Static;
 
 namespace Demo
 {
@@ -15,7 +16,7 @@ namespace Demo
         static void Draw2D(IDraw2D shape)
         {
             shape.Draw();
-        } 
+        }
         #endregion
         static void Main()
         {
@@ -46,6 +47,30 @@ namespace Demo
             /// PrintShapeInfo(shape); 
             #endregion
 
+            #region Static [Class, Attribute, Property, Constructor, Method]
+
+            //Utility U01 = new Utility(1, 2);
+            //Utility U02 = new Utility(5, 10);
+
+            // The Result of Calling this Method Will not be diferent By the Difference of the Object State[Data]
+            //Console.WriteLine(U01.CmToInch(254));
+            //Console.WriteLine(U02.CmToInch(254));
+
+            //Console.WriteLine(Utility.CmToInch(254));
+            //Console.WriteLine(Utility.CalcCircleArea(10));
+
+            //Console.WriteLine(Utility.CalcCircleArea(10)); // first usage so will call in first the static constructor then call the method
+            //Console.WriteLine(Utility.CalcCircleArea(10)); // here will call the method direct becouse the static Constructor just Called One per Class Lifetime 
+
+            //Math
+            //Convert
+            //Console
+
+            //Guid
+            ///Console.WriteLine(  Guid.NewGuid()); 
+
+
+            #endregion
 
 
         }
