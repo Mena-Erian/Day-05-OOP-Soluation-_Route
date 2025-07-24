@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment.First_Task
 {
-    internal class Point3D : IComparable<Point3D>
+    internal class Point3D : IComparable<Point3D>, ICloneable
     {
         #region Properties
         public int X { get; set; }
@@ -37,7 +37,16 @@ namespace Assignment.First_Task
         public int CompareTo(Point3D? other)
         {
             if (other is null) return 1;
-            return this.X.CompareTo(other?.X) + this.Y.CompareTo(other?.Y) ;
+            return this.X.CompareTo(other?.X) + this.Y.CompareTo(other?.Y);
+        }
+        public object Clone()
+        {
+            return new Point3D() // deep copy
+            {
+                X =  this.X,
+                Y = this.Y,
+                Z = this.Z
+            };
         }
 
         #region Operators overloading
