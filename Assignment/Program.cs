@@ -1,4 +1,5 @@
 ﻿using Assignment.First_Task;
+using Assignment.Second_Project;
 using System;
 
 namespace Assignment
@@ -7,7 +8,7 @@ namespace Assignment
     {
         static void Main()
         {
-            #region Project 1
+            #region First Program
             #region Task 2, 3 [Casting]
             /// Point3D p1 = new Point3D()
             /// {
@@ -115,6 +116,15 @@ namespace Assignment
             #endregion
             #endregion
 
+            #region Second Program
+            /// Console.WriteLine(Maths.Add(10, 5));
+            /// Console.WriteLine(Maths.Subtract(10, 5));
+            /// Console.WriteLine(Maths.Multiply(10, 5));
+            /// Console.WriteLine(Maths.Divide(10, 5));
+            #endregion
+
+            
+        
         }
     }
 }
