@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment.First_Task
 {
-    internal class Point3D 
+    internal class Point3D : IComparable<Point3D>
     {
         #region Properties
         public int X { get; set; }
@@ -34,7 +34,11 @@ namespace Assignment.First_Task
 
 
         #region Methods
-
+        public int CompareTo(Point3D? other)
+        {
+            if (other is null) return 1;
+            return this.X.CompareTo(other?.X) + this.Y.CompareTo(other?.Y) ;
+        }
 
         #region Operators overloading
         public static bool operator ==(Point3D left, Point3D right)

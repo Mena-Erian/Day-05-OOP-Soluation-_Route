@@ -34,8 +34,27 @@ namespace Assignment
             /// Console.WriteLine(p2.GetHashCode());
             #endregion
 
-           
-           
+            #region Task 5 [Implemente IComparable<Point3D> interface]
+            /// Point3D[] points = new Point3D[10];
+            /// Random random = new Random();
+            /// int num = 0;
+            /// for (int i = 0; i < points.Length; i++)
+            /// {
+            ///     num = (int)Math.Floor(random.NextDouble() * 100); // Random Numbers between 0 and 100
+            ///     points[i] = new Point3D(num, ++num, num);
+            /// }
+            /// Console.WriteLine("\nBefore sorting");
+            /// foreach (Point3D point in points)
+            /// {
+            ///     Console.WriteLine(point);
+            /// }
+            /// Console.WriteLine("\nAfter sorting");
+            /// Array.Sort(points); // Implemente IComparable<Point3D> interface
+            /// foreach (Point3D point in points)
+            /// {
+            ///     Console.WriteLine(point);
+            /// } 
+            #endregion
 
         }
     }
