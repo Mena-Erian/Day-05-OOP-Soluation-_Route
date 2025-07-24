@@ -36,7 +36,7 @@ namespace Demo.Static
         ///                                     (instance constructor for instance fields, static constructor for static fields)
 
         // 2. Constant
-        private const double pi = 3.14; // Can't assign in any wehter constructor or another
+        private const double pi = 3.14; // Can't assign in any where wehter there constructor or another
 
         // Const VS Readonly
         /// 1. const : Can't assign in any wehter constructor or another just in there declartion (Const act static so i can't write static kayword in there decaltion) 
@@ -44,7 +44,7 @@ namespace Demo.Static
         /// 2. readonly: Can just assign  - At its declaration
         ///                               - In a constructor =>
         ///                                 (instance constructor for instance fields, static constructor for static fields)
-        
+
         // Class Member Property: Static Property : [Must Deal with One of the Following]:
         /// 1. Static Attribute
         /// 2. Constant
@@ -55,20 +55,19 @@ namespace Demo.Static
         }
 
 
-
+        // public readonly double test = default;
         // Object Member Constructor : Non-Static Constructor
         /// public Utility(int x, int y)
         /// {
         ///     X = x;
         ///     Y = y;
-        ///     //pi = default; can't here becouse is readonly
+        ///     pi = default; // can't here becouse is const ,, but i can in  readonly
+        ///     //test = pi; // here i can even there is readonly but when was const i was can't do this
         ///     //this.pi = 3.14;
         ///     //Utility.pi = 3.14; is not the right placee for initializing the static attribute
         /// }
 
         // Class have just One Static Constructor not more like the Object member Constructor(can do many)
-
-
 
         // What is the something will Called Once per Class Lifetime:
         ///                          Static Constructor [Max Only One Per Class]
@@ -83,7 +82,7 @@ namespace Demo.Static
         {
             //pi = 3.14;
         }
- 
+
         // Class Member Method: Static Method
         public static double CmToInch(double Cm)
         {

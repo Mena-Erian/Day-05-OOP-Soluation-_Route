@@ -1,10 +1,16 @@
 ﻿using Demo.Abstraction;
+using Demo.Sealed;
 using Demo.Static;
 
 namespace Demo
 {
     internal class Program
     {
+        static void CalcPayment(PaymentProcessor02 processor)
+        {
+            processor.ProccessPayment(100);
+        }
+
         #region Abstract [Abstract Class, Abstract Method, Abstract Property]
         static void PrintShapeInfo(Shape shape)
         {
@@ -72,7 +78,19 @@ namespace Demo
 
             #endregion
 
-
+            #region Sealed [Class, Property, Method]
+            /// //MyPaymentProcessor processor = new MyPaymentProcessor();
+            /// //CalcPayment(processor);
+            /// 
+            /// ImmutableString str = new ImmutableString("Ahmed");
+            /// str = new ImmutableString("Mena");
+            /// 
+            /// 
+            /// Parent parent = new GrandChild();
+            /// 
+            /// Console.WriteLine(parent.Salary); // will be call the salary in child not in grandchild
+            #endregion
+        
         }
     }
 }
