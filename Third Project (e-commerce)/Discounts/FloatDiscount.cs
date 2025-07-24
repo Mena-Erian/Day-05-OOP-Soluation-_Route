@@ -1,4 +1,4 @@
-﻿namespace Third_Project__e_commerce_.Discount
+﻿namespace Third_Project__e_commerce_.Discounts
 {
     class FloatDiscount : Discount
     {
