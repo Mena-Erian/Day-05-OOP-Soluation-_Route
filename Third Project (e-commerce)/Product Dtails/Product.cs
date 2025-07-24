@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Third_Project__e_commerce_.Discounts;
 
-namespace Third_Project__e_commerce_.Users
+namespace Third_Project__e_commerce_.Product_Dtails
 {
-    abstract class User 
+    internal class Product
     {
         public string? Name { get; set; }
-        public abstract Discount GetDiscount();
+        public  decimal Price { get; set; }
+        public int Quantity { get; set; }
     }
 }

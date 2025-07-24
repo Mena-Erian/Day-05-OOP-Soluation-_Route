@@ -61,7 +61,6 @@ namespace Assignment
             return number;
         }
 
-
         public static int GetIntFromUser(string massageToUser, bool isMainMsg = true)
         {
             int number = 0;
@@ -80,6 +79,29 @@ namespace Assignment
                         Console.WriteLine($"Please Enter the {massageToUser}: ");
                     }
                     while (!int.TryParse(Console.ReadLine(), out number));
+                    break;
+            }
+
+            return number;
+        }
+        public static decimal GetDecimalFromUser(string massageToUser, bool isMainMsg = true)
+        {
+            decimal number = 0;
+            switch (isMainMsg)
+            {
+                case true:
+                    do
+                    {
+                        Console.Write(massageToUser);
+                    }
+                    while (!decimal.TryParse(Console.ReadLine(), out number));
+                    break;
+                case false:
+                    do
+                    {
+                        Console.WriteLine($"Please Enter the {massageToUser}: ");
+                    }
+                    while (!decimal.TryParse(Console.ReadLine(), out number));
                     break;
             }
 
