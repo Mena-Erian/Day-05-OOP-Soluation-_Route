@@ -33,6 +33,27 @@ namespace Assignment.First_Task
         #endregion
 
 
+        #region Methods
+
+
+        #region Operators overloading
+        public static bool operator ==(Point3D left, Point3D right)
+        {
+            if (left.X == right.X && left.Y == right.Y && left.Z == right.Z)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool operator !=(Point3D left, Point3D right)
+        {
+            if (left.X != right.X && left.Y != right.Y && left.Z != right.Z)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
 
         #region Overriding [ToString, Equals, GetHashCode]
         public override bool Equals(object? obj)
@@ -54,7 +75,7 @@ namespace Assignment.First_Task
         }
         #endregion
 
-        
+        #endregion
 
     }
 }
