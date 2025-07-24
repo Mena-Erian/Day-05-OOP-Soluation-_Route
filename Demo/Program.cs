@@ -7,10 +7,24 @@ namespace Demo
 {
     internal class Program
     {
+        #region Record
+        public record Person(string FirstName, string LastName, int Age);
+
+        // can modify a mutable record
+        public record Person02
+        {
+            public string? FirstName;
+            public string? LastName;
+            public int Age;
+        }
+        #endregion
+        
+        #region Sealed
         static void CalcPayment(PaymentProcessor02 processor)
         {
             processor.ProccessPayment(100);
-        }
+        } 
+        #endregion
 
         #region Abstract [Abstract Class, Abstract Method, Abstract Property]
         static void PrintShapeInfo(Shape shape)
@@ -111,7 +125,38 @@ namespace Demo
             /// }; 
             #endregion
 
+            #region Class Types Summary
+            /// 1. Concrete Class   (Class fully implemtned)
+            /// 2. Static Class     (Container for Methods and Properties)
+            /// 3. Abstract Class   (Partial implmetnation to Classes incomming in the future to implemtnt)
+            /// 4. Sealed Class     (Not any Class Can implmetn from them)
+            /// 5. Partial Class    (for 3 Resons was said before) 
+            #endregion
 
+            #region Record [Self Study]
+            /// Person d = new Person("Mena", "Erian", 21);
+            /// Person c = new Person("Mena", "Erian", 21);
+            /// 
+            /// Console.WriteLine(d == c);
+            /// Console.WriteLine(d.GetHashCode());
+            /// Console.WriteLine(c.GetHashCode());
+            /// 
+            /// //d.FirstName = "";// i can't here
+            /// //d.Age = 50;// i can't here
+            /// // becouse it immutable by default
+            /// 
+            /// Console.WriteLine(d.GetType());
+            /// 
+            /// Person02 person02 = new Person02()
+            /// {
+            ///     FirstName = "Mena",
+            ///     LastName = "Erian",
+            ///     Age = 21
+            /// };
+            /// person02.Age = 20;
+            /// person02.FirstName = "Mina";
+            /// // can modify a mutable record
+            #endregion
         }
     }
 }
