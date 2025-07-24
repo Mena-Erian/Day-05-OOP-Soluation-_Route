@@ -123,8 +123,6 @@ namespace Assignment
             /// Console.WriteLine(Maths.Divide(10, 5));
             #endregion
 
-            
-        
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    static class Helper
+    public static class Helper
     {
         public static int GetIntFromUserUsingTryParse(string dataName)
         {
