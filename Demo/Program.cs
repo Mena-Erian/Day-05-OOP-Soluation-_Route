@@ -1,4 +1,5 @@
 ﻿using Demo.Abstraction;
+using Demo.Partial;
 using Demo.Sealed;
 using Demo.Static;
 
@@ -90,7 +91,27 @@ namespace Demo
             /// 
             /// Console.WriteLine(parent.Salary); // will be call the salary in child not in grandchild
             #endregion
-        
+
+            #region Partial [Class, Method, interface, struct]
+            // Why i Need to make class Partial
+            /// 1. if the Class Conatain alot so for ORGANIZATION we will make it Partial
+            /// 2. if more than one devolper work in this class, struct, interface or method so 
+            ///         to avoid the conflict possible happens when marge(git) => maked it partial
+            /// 3. if i have tool that generate class or another, and i need to add method or any in this class
+            ///         so i will make the class generated => partial. Why?
+            ///    imagen if i need to regnerete this class, so the code i wass add it will be emliments
+            ///    so to avoid this we maked the class generated partial and write my code in another file (partial)
+
+            /// Employee employee = new Employee()
+            /// {
+            ///     Id = 1,
+            ///     Name = "Mena",
+            ///     Age = 21,
+            ///     Address = "Dokki, Giza." // in another file (partial)
+            /// }; 
+            #endregion
+
+
         }
     }
 }
